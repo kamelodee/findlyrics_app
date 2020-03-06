@@ -35,17 +35,24 @@ class Search extends Component {
                             </h3>
                             <p className="lead text-center">Get lyrics for any song</p>
                             <form className='form-inline' onSubmit={this.findSong.bind(this,dispatch)}>
-                                <div className="form-group">
-                                    <input type="text" className="form-control "
+                                <div className="input-group md-form form-sm form-1 pl-0 d-sm-flex">
+                                <div className="input-group-prepend">
+                                        <span className="input-group-text cyan lighten-2"
+                                            id="basic-text1"><i class="fas fa-search text-white"
+                                  aria-hidden="true"></i></span>
+                                </div>
+                                    <input type="text" className="form-control my-0 py-1"
+                                         aria-label="Search"
                                         placeholder='song title ....'
                                         name='trackTitle'
                                         value={this.state.trackTitle}
                                         onChange={this.onChange} />
-                                    <button className='btn btn-primary btn-md mr-5' type='submit'><i class="fas fa-search"></i>search</button>
-                                <img className='ml-2' src={play} alt="playing" width='400' height='50'/>
+                                   <input className="btn input-group-text cyan lighten-2" type="submit" value="search"/>
                                 </div>
+                               
                                 
                             </form>
+
                             
                         </div>
                     )
